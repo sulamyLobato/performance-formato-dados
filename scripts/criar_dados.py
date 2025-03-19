@@ -15,9 +15,6 @@ df.to_parquet('dados/dataset.parquet', engine='pyarrow')
 # Salvar em ORC
 df.to_orc('dados/dataset.orc')
 
-
-
-
 # Verificar se a pasta 'dados' existe, se não, cria a pasta
 if not os.path.exists('dados'):
     os.makedirs('dados')
