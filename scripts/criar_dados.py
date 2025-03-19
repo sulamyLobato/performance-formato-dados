@@ -15,6 +15,15 @@ df.to_parquet('dados/dataset.parquet', engine='pyarrow')
 # Salvar em ORC
 df.to_orc('dados/dataset.orc')
 
+# Salvar em CSV
+df.to_csv("dados/dataset.csv", index=False)
+
+# Salvar em JSON
+
+df.to_json("dados/dataset.json", orient="records", lines=False, force_ascii=False)
+
+print("Arquivos salvos com sucesso!")
+
 # Verificar se a pasta 'dados' existe, se não, cria a pasta
 if not os.path.exists('dados'):
     os.makedirs('dados')
